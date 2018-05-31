@@ -4,7 +4,7 @@
   "description": "Frontend for chrisboucher.co.uk",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --host 0.0.0.0 --public chrisboucher.co.uk",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
