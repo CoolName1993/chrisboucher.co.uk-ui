@@ -1,0 +1,22 @@
+{
+  "name": "website-ui",
+  "version": "0.1.0",
+  "description": "Frontend for chrisboucher.co.uk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoolName1993/website-ui.git"
+  },
+  "author": "Chris Boucher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CoolName1993/website-ui/issues"
+  },
+  "homepage": "https://github.com/CoolName1993/website-ui#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
