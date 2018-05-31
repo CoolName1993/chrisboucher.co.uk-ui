@@ -1,8 +1,6 @@
 module.exports = {
     apps: [{
-      name: 'website-ui',
-      script: 'npm',
-      args: 'run-script start'
+      name: 'website-ui'
     }],
     deploy: {
       production: {
@@ -12,7 +10,7 @@ module.exports = {
         ref: 'origin/master',
         repo: 'git@github.com:CoolName1993/website-ui.git',
         path: '/home/ubuntu/server',
-        'post-deploy': 'npm install && pm2 startOrRestart ecosystem.config.js'
+        'post-deploy': 'npm install && npm run-script build-prod && pm2 startOrRestart ecosystem.config.js'
       }
     }
   }
