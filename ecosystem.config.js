@@ -2,7 +2,7 @@ module.exports = {
     apps: [{
       name: 'website-ui',
       script: 'npm',
-      args: 'run-script ng serve'
+      args: 'run-script start'
     }],
     deploy: {
       production: {
