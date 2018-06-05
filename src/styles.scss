@@ -1,17 +1,26 @@
 @import 'palette';
+@import 'globals';
 
 body {
-    background-color: #EFEFEF;
+    background-color: get-color('background');
     font-family: 'Roboto', sans-serif;
+    margin: 0px;
+}
+
+app-root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 nav {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 0px;
+    left: 0px;
     background-color: get-color('accent');
     width: 100%;
     font-size: 12pt;
+    user-select: none;
 
     & > a {
         color: get-color('foreground');
@@ -19,10 +28,10 @@ nav {
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.25s;
+        transition: $hover-animation;
 
         &:hover {
-            background-color: lighter-color('accent', 2);
+            background-color: lighter-color('accent', 1);
         }
 
         & > selected {
@@ -31,6 +40,54 @@ nav {
     }
 }
 
-.content {
+main {
     margin-top: 80px;
+    flex: 1 0 auto;
+    width: 100%;
+}
+
+footer {
+    flex-shrink: 0;
+    margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;    
+    background-color: lighter-color('accent', 1);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    padding: 25px 35px;
+    font-size: 16px;
+    color: get-color('foreground');
+    display: flex;
+
+    & > .footer-right {
+        flex: 1;
+        text-align: right;
+        & > a {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            color: get-color('foreground');            
+            background-color: lighter-color('accent', 1.5);
+            border-radius: 2px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 35px;
+            margin-left: 3px;
+            text-decoration: none;
+            transition: $hover-animation;
+
+            &:hover {
+                background-color: lighter-color('accent', 2);
+            }
+        }
+    }
+
+    & > .footer-left {
+        flex: 3;
+        text-align: left;
+        & > p {
+            color: darker-color('foreground', 2);
+            font-size: 14px;
+            margin: 0;
+        }
+    }
 }
