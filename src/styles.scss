@@ -1,12 +1,36 @@
+@import 'palette';
+
 body {
     background-color: #EFEFEF;
     font-family: 'Roboto', sans-serif;
 }
 
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: get-color('accent');
+    width: 100%;
+    font-size: 12pt;
+
+    & > a {
+        color: get-color('foreground');
+        padding: 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.25s;
+
+        &:hover {
+            background-color: lighter-color('accent', 2);
+        }
+
+        & > selected {
+            background-color: lighter-color('accent', 1);
+        }
+    }
+}
+
+.content {
+    margin-top: 80px;
 }
