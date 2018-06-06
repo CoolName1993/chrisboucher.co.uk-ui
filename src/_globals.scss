@@ -1,1 +1,11 @@
 $hover-animation: cubic-bezier(0.165, 0.84, 0.44, 1) 0.25s;
+$font-sizes: (
+    'small': 8pt,
+    'medium': 12pt,
+    'large': 14pt,
+    'x-large': 16pt
+);
+
+@function font-size($size: 'small') {
+    @return map-get($map: $font-sizes, $key: $size);
+}

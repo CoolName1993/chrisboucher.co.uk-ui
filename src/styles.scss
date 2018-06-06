@@ -19,12 +19,12 @@ nav {
     left: 0px;
     background-color: get-color('accent');
     width: 100%;
-    font-size: 12pt;
+    font-size: font-size('medium');
     user-select: none;
 
     & > a {
         color: get-color('foreground');
-        padding: 25px;
+        padding: 15px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
@@ -50,11 +50,10 @@ footer {
     flex-shrink: 0;
     margin-top: auto;
     width: 100%;
-    box-sizing: border-box;    
+    box-sizing: border-box;
     background-color: lighter-color('accent', 1);
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
     padding: 25px 35px;
-    font-size: 16px;
     color: get-color('foreground');
     display: flex;
 
@@ -65,10 +64,10 @@ footer {
             display: inline-block;
             width: 35px;
             height: 35px;
-            color: get-color('foreground');            
+            color: get-color('foreground');
             background-color: lighter-color('accent', 1.5);
             border-radius: 2px;
-            font-size: 20px;
+            font-size: font-size('large');
             text-align: center;
             line-height: 35px;
             margin-left: 3px;
@@ -86,7 +85,7 @@ footer {
         text-align: left;
         & > p {
             color: darker-color('foreground', 2);
-            font-size: 14px;
+            font-size: font-size('medium');
             margin: 0;
         }
     }
