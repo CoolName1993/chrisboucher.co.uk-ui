@@ -5,7 +5,7 @@ module.exports = {
     deploy: {
       production: {
         user: 'ubuntu',
-        host: 'chrisboucher.co.uk',
+        host: 'www.chrisboucher.co.uk',
         key: '../nodejs-server.pem',
         ref: 'origin/master',
         repo: 'git@github.com:CoolName1993/website-ui.git',
