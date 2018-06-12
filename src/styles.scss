@@ -31,7 +31,7 @@ nav {
         transition: $hover-animation;
 
         &:hover {
-            background-color: lighter-color('accent', 1);
+            background-color: lighter-color('accent', 0.5);
         }
 
         & > selected {
@@ -41,7 +41,7 @@ nav {
 }
 
 main {
-    margin-top: 80px;
+    margin-top: 60px;
     flex: 1 0 auto;
     width: 100%;
 }
@@ -51,7 +51,7 @@ footer {
     margin-top: auto;
     width: 100%;
     box-sizing: border-box;
-    background-color: lighter-color('accent', 1);
+    background-color: lighter-color('accent', 0.5);
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
     padding: 25px 35px;
     color: get-color('foreground');
@@ -65,7 +65,7 @@ footer {
             width: 35px;
             height: 35px;
             color: get-color('foreground');
-            background-color: lighter-color('accent', 1.5);
+            background-color: lighter-color('accent', 1);
             border-radius: 2px;
             font-size: font-size('large');
             text-align: center;
@@ -75,7 +75,7 @@ footer {
             transition: $hover-animation;
 
             &:hover {
-                background-color: lighter-color('accent', 2);
+                background-color: lighter-color('accent', 1.5);
             }
         }
     }

@@ -4,7 +4,7 @@ $default-palette: (
     'tertiary': #0079ca,
     'foreground': #f5f5f5,
     'background': #e6e6e6,
-    'accent': #131313
+    'accent': #202020
 );
 
 @function lighter-color($color-name: 'primary', $level: 0, $color-palette: $default-palette) {
