@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BlogService, ListPost, GetAllPostsResponse } from '../blog.service';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-blog',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
 
-  constructor() { }
+  public posts: ListPost[];
+
+  constructor(private blogService: BlogService) { }
 
   ngOnInit() {
+    this.blogService.getAllPosts().subscribe((result: GetAllPostsResponse) => this.posts = result.posts);
   }
 
 }
