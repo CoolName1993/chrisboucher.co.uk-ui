@@ -6,20 +6,22 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { HomeComponent } from './home/home.component';
-import { BlogComponent } from './blog/blog.component';
+import { BlogListComponent } from './blog-list/blog-list.component';
 import { AppsComponent } from './apps/apps.component';
 import { UnderConstructionComponent } from './under-construction/under-construction.component';
 import { AppDetailsComponent } from './app-details/app-details.component';
+import { BlogComponent } from './blog/blog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
     HomeComponent,
-    BlogComponent,
+    BlogListComponent,
     AppsComponent,
     UnderConstructionComponent,
-    AppDetailsComponent
+    AppDetailsComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,36 @@
+@import '../../palette';
+@import '../../globals';
+
+#blogList {
+    padding: 0 10%;
+    & > ul {
+        list-style: none;
+        padding: unset;
+
+        & > li.post {
+            background-color: get-color('foreground');
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+            padding: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+
+            & h2.title {
+                margin-top: 0;
+            }
+
+            & .snippet {
+                word-wrap: break-word;
+            }
+
+            & .posted {
+                text-align: right;
+            }
+
+            &:hover {
+                background-color: darker-color('foreground', 0.5);
+                transition: $hover-animation;
+                box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.12);
+            }
+        }
+    }
+}

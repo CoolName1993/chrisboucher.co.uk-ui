@@ -90,3 +90,37 @@ footer {
         }
     }
 }
+
+.row {
+    display: flex;
+    flex-direction: row;
+
+    &.small {
+        flex: 1;
+    }
+
+    &.medium {
+        flex: 2;
+    }
+
+    &.large {
+        flex: 3;
+    }
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+
+    &.small {
+        flex: 1;
+    }
+
+    &.medium {
+        flex: 2;
+    }
+
+    &.large {
+        flex: 3;
+    }
+}

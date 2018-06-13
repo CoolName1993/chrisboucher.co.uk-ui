@@ -1,0 +1,12 @@
+<div id="blogList">
+  <h2>Available blog posts</h2>
+  <ul>
+    <li *ngFor="let post of posts" class="post row" (click)="openPost(post.id)">
+      <div class="column large">
+        <h2 class="title row large">{{post.title}}</h2>
+        <span class="snippet row medium">{{post.snippet}}</span>
+      </div>
+      <span class="posted row">{{post.posted}}</span>
+    </li>
+  </ul>
+</div>
