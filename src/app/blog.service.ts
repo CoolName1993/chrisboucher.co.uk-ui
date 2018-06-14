@@ -29,6 +29,7 @@ export class GetAllPostsResponse {
 
 export class BlogPost {
   constructor(public id: string, public title: string, public content: string[], public postDate: Date, public author: string) {}
+  static empty: BlogPost = new BlogPost("", "", [], new Date(), "");
 }
 
 export const BlogBaseURL: string = 'https://blog.chrisboucher.co.uk';

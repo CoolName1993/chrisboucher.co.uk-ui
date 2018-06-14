@@ -12,7 +12,9 @@ export class BlogComponent implements OnInit {
 
   public post: BlogPost
 
-  constructor(private route: ActivatedRoute, private blogService: BlogService) { }
+  constructor(private route: ActivatedRoute, private blogService: BlogService) {
+    this.post = BlogPost.empty
+  }
 
   ngOnInit() {
     this.route.paramMap.pipe(

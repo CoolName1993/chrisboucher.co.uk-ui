@@ -2,7 +2,6 @@
 @import '../../globals';
 
 #blogList {
-    padding: 0 10%;
     & > ul {
         list-style: none;
         padding: unset;
@@ -14,7 +13,7 @@
             margin-bottom: 10px;
             cursor: pointer;
 
-            & h2.title {
+            & h2 {
                 margin-top: 0;
             }
 

@@ -1,5 +1,6 @@
-{{post.id}}
-{{post.title}}
-{{post.content}}
-{{post.postDate}}
-{{post.author}}
+<div id="blogPost" class="column">
+    <h1>{{post.title}}</h1>
+    <p *ngFor="let paragraph of post.content">{{paragraph}}</p>
+    <p>{{post.postDate | date:'short'}}</p>
+    <p>{{post.author}}</p>
+</div>
