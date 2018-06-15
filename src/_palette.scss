@@ -1,21 +1,26 @@
 $default-palette: (
-    'primary': #00b96c,
-    'secondary': #b9004d,
-    'tertiary': #0079ca,
-    'foreground': #f5f5f5,
-    'background': #e6e6e6,
-    'accent': #202020
+    'primary': #263238,
+    'secondary': #f50057,
+    'foreground': #ffffff,
+    'background': #ffffff
 );
 
-@function lighter-color($color-name: 'primary', $level: 0, $color-palette: $default-palette) {
-    $color: map-get($map: $color-palette, $key: $color-name);
-    @return mix(white, $color, $level * 10%);
-}
+$text-palette: (
+    'primary': #ffffff,
+    'secondary': #000000,
+    'foreground': #000000,
+    'background': #000000
+);
 
-@function darker-color($color-name: 'primary', $level: 0, $color-palette: $default-palette) {
-    $color: map-get($map: $color-palette, $key: $color-name);
-    @return mix(black, $color, $level * 10%);
-}
+$light-palette: (
+    'primary': #4f5b62,
+    'secondary': #ff5983
+);
+
+$dark-palette: (
+    'primary': #000a12,
+    'secondary': #bb002f
+);
 
 @function get-color($color-name: 'primary', $color-palette: $default-palette) {
     @return map-get($map: $color-palette, $key: $color-name);

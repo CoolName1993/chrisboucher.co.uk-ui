@@ -5,6 +5,7 @@ body {
     background-color: get-color('background');
     font-family: 'Roboto', sans-serif;
     margin: 0px;
+    color: get-color('background', $text-palette);
 }
 
 app-root {
@@ -17,7 +18,7 @@ nav {
     position: fixed;
     top: 0px;
     left: 0px;
-    background-color: get-color('accent');
+    background-color: get-color('primary');
     width: 100%;
     font-size: font-size('medium');
     user-select: none;
@@ -31,18 +32,20 @@ nav {
         display: inline-block;
         transition: $hover-animation;
 
-        &:hover {
-            background-color: lighter-color('accent', 0.5);
+        &:hover, &.selected {
+            background-color: get-color('primary', $light-palette);
         }
 
-        & > selected {
-            background-color: lighter-color('accent', 1);
+        &#brandLogo:hover , &#brandLogo.selected{
+            background-color: get-color('secondary');
+            color: get-color('secondary', $text-palette);
         }
+
     }
 }
 
 main {
-    margin-top: 60px;
+    margin: 60px 0px 10px;
     flex: 1 0 auto;
 }
 
@@ -51,10 +54,10 @@ footer {
     margin-top: auto;
     width: 100%;
     box-sizing: border-box;
-    background-color: lighter-color('accent', 0.5);
+    background-color: get-color('primary', $light-palette);
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
     padding: 25px 35px;
-    color: get-color('foreground');
+    color: get-color('primary', $text-palette);
     display: flex;
 
     & > .footer-right {
@@ -64,8 +67,7 @@ footer {
             display: inline-block;
             width: 35px;
             height: 35px;
-            color: get-color('foreground');
-            background-color: lighter-color('accent', 1);
+            color: get-color('primary', $text-palette);
             border-radius: 2px;
             font-size: font-size('large');
             text-align: center;
@@ -75,7 +77,8 @@ footer {
             transition: $hover-animation;
 
             &:hover {
-                background-color: lighter-color('accent', 1.5);
+                background-color: get-color('primary');
+                box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
             }
         }
     }
@@ -84,7 +87,7 @@ footer {
         flex: 3;
         text-align: left;
         & > p {
-            color: darker-color('foreground', 2);
+            color: get-color('primary', $text-palette);
             font-size: font-size('medium');
             margin: 0;
         }
