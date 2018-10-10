@@ -78,6 +78,7 @@ footer {
 
             &:hover {
                 background-color: get-color('primary');
+                color: get-color('secondary', $light-palette);
                 box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
             }
         }
